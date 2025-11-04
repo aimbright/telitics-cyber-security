@@ -5,6 +5,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
+import ContactFormDialog from "./components/ContactFormDialog";
+import { ContactDialogProvider, useContactDialog } from "./contexts/ContactDialogContext";
 import Home from "./pages/Home";
 import Solutions from "./pages/Solutions";
 import Platform from "./pages/Platform";
@@ -15,11 +17,11 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
+const AppContent = () => {
+  const { isOpen, closeDialog } = useContactDialog();
+
+  return (
+    <>
       <BrowserRouter>
         <Navigation />
         <Routes>
@@ -32,7 +34,20 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
+        <ContactFormDialog open={isOpen} onOpenChange={closeDialog} />
       </BrowserRouter>
+    </>
+  );
+};
+
+const App = () => (
+  <QueryClientProvider client={queryClient}>
+    <TooltipProvider>
+      <Toaster />
+      <Sonner />
+      <ContactDialogProvider>
+        <AppContent />
+      </ContactDialogProvider>
     </TooltipProvider>
   </QueryClientProvider>
 );

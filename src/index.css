@@ -118,3 +118,48 @@ All colors MUST be HSL.
     @apply font-semibold;
   }
 }
+
+@layer utilities {
+  @keyframes slide {
+    0%, 100% {
+      transform: translateX(-100%);
+    }
+    50% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes gradient-shift {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+  
+  .bg-grid-pattern {
+    background-image: 
+      linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+  
+  .animated-gradient-text {
+    background: linear-gradient(
+      90deg,
+      #ffffff 0%,
+      #ffffff 10%,
+      hsl(var(--primary)) 30%,
+      hsl(var(--accent)) 50%,
+      hsl(var(--primary)) 70%,
+      #ffffff 90%,
+      #ffffff 100%
+    );
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-shift 8s ease-in-out infinite;
+  }
+}
