@@ -22,7 +22,7 @@ const AppContent = () => {
 
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/telitics-cyber-security">
         <Navigation />
         <Routes>
           <Route path="/" element={<Home />} />
