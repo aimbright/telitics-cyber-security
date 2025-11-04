@@ -41,6 +41,9 @@ jobs:
         with:
           enablement: true
       
+      - name: List dist contents
+        run: ls -la dist/ && echo "---" && head -30 dist/index.html
+      
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
