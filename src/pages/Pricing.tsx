@@ -389,20 +389,9 @@ const Pricing = () => {
             {/* Enhanced buttons with better styling */}
             <div className="flex flex-col sm:flex-row gap-6 justify-center pt-8">
               <Button
-                asChild
-                size="lg"
-                className="bg-white text-primary hover:bg-white/95 rounded-[50px] px-10 py-7 text-lg font-bold shadow-2xl hover:shadow-[0_10px_40px_rgba(255,255,255,0.4)] hover:-translate-y-1 transition-all duration-300 transform hover:scale-105"
-              >
-                <Link to="/pricing" className="flex items-center gap-2">
-                  Explore Our Platform
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
-              </Button>
-              <Button
                 onClick={openDialog}
                 size="lg"
-                variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-primary rounded-[50px] px-10 py-7 text-lg font-bold shadow-2xl hover:shadow-[0_10px_40px_rgba(255,255,255,0.3)] hover:-translate-y-1 transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/10"
+                className="bg-white text-primary hover:bg-white/95 rounded-[50px] px-10 py-7 text-lg font-bold shadow-2xl hover:shadow-[0_10px_40px_rgba(255,255,255,0.4)] hover:-translate-y-1 transition-all duration-300 transform hover:scale-105"
               >
                 <span className="flex items-center gap-2">
                   Get Started
