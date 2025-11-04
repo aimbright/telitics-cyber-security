@@ -1,73 +1,44 @@
-# Welcome to your Lovable project
+# Telitics Cyber Security Website
 
-## Project info
+A modern cyber security and blockchain solutions website built with React, TypeScript, and Vite.
 
-**URL**: https://lovable.dev/projects/9dc6dc43-5693-45f7-8383-a67ca0f7e79d
+## Deployment Options
 
-## How can I edit this code?
+### Option 1: Deploy to Vercel (Recommended - Works with Private Repos)
 
-There are several ways of editing your application.
+1. Go to [vercel.com](https://vercel.com) and sign in with GitHub
+2. Click "Add New Project"
+3. Import repository: `aimbright/telitics-cyber-security`
+4. Vercel will auto-detect settings
+5. Click "Deploy"
+6. Your site will be live in minutes!
 
-**Use Lovable**
+### Option 2: Deploy to Netlify (Works with Private Repos)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/9dc6dc43-5693-45f7-8383-a67ca0f7e79d) and start prompting.
+1. Go to [netlify.com](https://netlify.com) and sign in with GitHub
+2. Click "Add new site" → "Import an existing project"
+3. Select your repository
+4. Build settings:
+   - Build command: `npm run build`
+   - Publish directory: `dist`
+5. Click "Deploy site"
 
-Changes made via Lovable will be committed automatically to this repo.
+### Option 3: GitHub Pages (Requires Public Repository)
 
-**Use your preferred IDE**
+1. Make repository public in Settings → Danger Zone
+2. Go to Settings → Pages
+3. Select "GitHub Actions" as source
+4. The workflow will deploy automatically
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Local Development
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```bash
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## Build
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/9dc6dc43-5693-45f7-8383-a67ca0f7e79d) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+```bash
+npm run build
+```
